@@ -5,6 +5,7 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import Home from './pages/Home/Home';
 import Layout from './components/Layout/Layout';
+import ProductList from './pages/ProductList/ProductList';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     createRoutesFromElements(
       <Route path='/' element={<Layout/>} errorElement={<ErrorPage/>}>
         <Route path='/' element={<Home/>}/>
+        <Route path='/products' element={<ProductList/>}/>
         <Route path='login' element={<Login/>}/>
         <Route path='register' element={<Register/>}/>
       </Route>
